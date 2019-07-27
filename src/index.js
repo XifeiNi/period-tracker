@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'typeface-roboto';
 import App from './App';
+// import SimpleBottomNavigation from './navigator'
 import * as serviceWorker from './serviceWorker';
 
 

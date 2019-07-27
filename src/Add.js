@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import MaterialUIPickers from './Add_date';
+import './Add_date.css'
 
 class Add extends React.Component{
   constructor(props) {
@@ -13,9 +15,17 @@ class Add extends React.Component{
 
   render() {
     return (
-      <Button variant="contained" color="primary" onClick={this.handleClick}>
-        Add
-      </Button>
+      <div className = "container">
+          <Button variant="contained" color="primary" onClick={this.handleClick}>
+            X
+          </Button>
+          <div>
+          <MaterialUIPickers variant="contained" color="primary"/>
+          </div>
+          <Button variant="contained" color="primary" onClick={this.handleClick}>
+            Done
+          </Button>
+      </div>
     );
   }
 }
