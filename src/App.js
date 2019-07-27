@@ -1,9 +1,9 @@
 // import third party library
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
 
 // import user defined js file
-import logo from './logo.svg';
 import './App.css';
 import Home from './Home';
 import Add from './Add';
@@ -31,9 +31,17 @@ class App extends React.Component{
       return (
         <Home handleChangeCurrentPage={this.handleChangeCurrentPage}/>
       )
-    } else {
+    } else if (state["currentPage"] === "Add") {
       return (
         <Add handleChangeCurrentPage={this.handleChangeCurrentPage}/>
+      )
+    } else {
+      console.log(state);
+      return (
+        <Chip
+          label="Error! See console for detail"
+          color="secondary"
+        />
       )
     }
   }
