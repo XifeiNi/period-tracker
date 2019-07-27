@@ -56,7 +56,8 @@ class Home extends React.Component{
           </div>
 
           <Container maxWidth="xs">
-            <Calendar />
+            <Calendar value={[new Date(2019,7,27), new Date(2019,7,28)]}
+                onChange={(value) => alert('New date is: ', value)}/>
           </Container>
           
           <div className="container-div">
