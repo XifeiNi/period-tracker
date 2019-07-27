@@ -47,7 +47,7 @@ class Home extends React.Component{
                 <Typography variant="h6" color="inherit" className={useStyles.title}>
                   Period Tracker
                 </Typography>
-                <IconButton edge="end" color="inherit">
+                <IconButton edge="end" color="inherit" href="https://github.com/XifeiNi/period-tracker">
                   <MoreIcon />
                 </IconButton>
               </Toolbar>
@@ -58,12 +58,14 @@ class Home extends React.Component{
             <Calendar />
           </Container>
           
-
+          <div className="container-div">
+          <div className="sub-container">
           <Fab size="medium" color="secondary" aria-label="add" 
                className={useStyles.margin} onClick={this.handleClick}>
             <AddIcon />
           </Fab>
-
+          </div>
+          </div>
           </div>
     );
   }
