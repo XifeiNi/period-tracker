@@ -16,7 +16,7 @@ npm start
 | Name       | Email          |
 | ---------- | -------------- |
 | Jack Jiang | me@jackjyq.com |
-| ?          | ?              |
+| Cecilia Ni | cecilia990@outlook.com|
 | ?          | ?              |
 | ?          | ?              |
 | ?          | ?              |
