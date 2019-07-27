@@ -10,6 +10,7 @@ import Fab from '@material-ui/core/Fab';
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import CloseIcon from '@material-ui/icons/Close';
 import './Add_date.css'
 
 class Add extends React.Component{
@@ -40,10 +41,10 @@ class Add extends React.Component{
         <div className={useStyles.root}>
           <AppBar position="static" className="app-bar">
             <Toolbar>
-              <Button variant="contained" color="primary" onClick={this.handleClick}>
-              X
-              </Button>
-              <Button variant="contained" color="primary" onClick={this.handleClick}>
+              <IconButton onClick={this.handleClick}>
+               <CloseIcon color="default"/>
+              </IconButton>
+              <Button variant="contained" color="secondary" onClick={this.handleClick}>
                 Done
               </Button>
             </Toolbar>
