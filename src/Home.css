@@ -1,3 +1,8 @@
 .react-calendar {
     border: none;
 }
+
+.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+    display: flex;
+    justify-content: space-between;
+}
