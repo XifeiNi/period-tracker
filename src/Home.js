@@ -47,7 +47,7 @@ class Home extends React.Component{
                 <Typography variant="h6" color="inherit" className={useStyles.title}>
                   Period Tracker
                 </Typography>
-                <IconButton edge="end" color="inherit">
+                <IconButton edge="end" color="inherit" href="https://github.com/XifeiNi/period-tracker">
                   <MoreIcon />
                 </IconButton>
               </Toolbar>

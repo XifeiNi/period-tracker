@@ -42,9 +42,9 @@ class Add extends React.Component{
           <AppBar position="static" className="app-bar">
             <Toolbar>
               <IconButton onClick={this.handleClick}>
-               <CloseIcon color="default"/>
+               <CloseIcon/>
               </IconButton>
-              <Button variant="contained" color="secondary" onClick={this.handleClick}>
+              <Button variant="contained" color="default" onClick={this.handleClick}>
                 Done
               </Button>
             </Toolbar>
