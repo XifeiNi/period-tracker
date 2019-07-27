@@ -21,3 +21,8 @@
     padding-bottom: 100px;
     justify-content: space-around;
 }
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary{
+    color: firebrick;
+    background-color: pink;
+}

@@ -28,7 +28,7 @@ body {
 
 .MuiToolbar-regular {
 	background: lightpink;
-	color: lightyellow;
+	color: firebrick;
 	font-family: "Lucida Grande";
 }
 
@@ -43,4 +43,12 @@ body {
 .MuiFab-sizeMedium {
 	width: 65px;
 	height: 65px;
+}
+
+.react-calendar__month-view__weekdays{
+	color: firebrick;
+}
+
+.react-calendar__navigation button {
+	color: firebrick;
 }
