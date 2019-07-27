@@ -20,6 +20,13 @@ npm run deploy
 
 - [material-ui](https://material-ui.com/getting-started)
 
+## Function Call
+
+- index.js
+  - App.js
+    - Home.js
+    - Add.js
+
 ## Contributor
 
 | Name       | Email          |
