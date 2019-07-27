@@ -1,4 +1,5 @@
-var TestUserDate = {}
+var TestUserDate = {new Date(2019,6,24)}
+
 TestUserDate[new Date(2019,6,24)] = {
     "Blood": 1,
     "Pain": 1,
@@ -17,7 +18,7 @@ TestUserDate[new Date(2019,6,26)] = {
     "Blood": 3,
     "Pain": 3,
     "Mood": 3,
-    "Sex": 3
+    "Sex": 2
 }
 
 export default TestUserDate;
