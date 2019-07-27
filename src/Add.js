@@ -10,15 +10,21 @@ import b2 from './ICON/bleed/2.png'
 import b3 from './ICON/bleed/3.png'
 import b4 from './ICON/bleed/4.png'
 import EmptyUserData from './dataset/EmptyUserData';
+import homebackground from './ICON/background/background.png';
+
 
 
 class Add extends React.Component{
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.state = {"currentPage": "blood"
+                 };
   }
 
-
+  nextState(state){
+    this.setState(state);
+  }
 
   handleClick(e) {
     let state = this.props.state;
@@ -57,16 +63,15 @@ class Add extends React.Component{
           <img className="image" alt="404" src={ testImg } />
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b1 } />
-        <img className="image" alt="404" src={ b2 } />
+        <img className="image" alt="404" src={ b1 } onClick={this.handleClick}/>
+        <img className="image" alt="404" src={ b2 } onClick={this.handleClick}/>
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b3 } />
-        <img className="image" alt="404" src={ b4 } />
+        <img className="image" alt="404" src={ b3 } onClick={this.handleClick}/>
+        <img className="image" alt="404" src={ b4 } onClick={this.handleClick}/>
         </div>
         </div>
     );
   }
 }
-
 export default Add;
