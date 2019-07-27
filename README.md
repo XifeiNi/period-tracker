@@ -2,9 +2,17 @@
 
 ## Deployment
 
+### deploy to local host
+
 ```shell
 npm install
 npm start
+```
+
+### deploy to github page
+
+```shell
+npm run deploy
 ```
 
 ## Reference
