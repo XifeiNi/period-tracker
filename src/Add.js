@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import testImg from './pikachu.png'
 import './Add.css'
 import b1 from './ICON/bleed/1.png'
 import b2 from './ICON/bleed/2.png'
@@ -24,8 +23,6 @@ import mt from './ICON/mood/theme.png'
 import pt from './ICON/pain/theme.png'
 import st from './ICON/sex/theme.png'
 
-import EmptyUserData from './dataset/EmptyUserData';
-import homebackground from './ICON/background/background.png';
 
 
 
