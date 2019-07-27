@@ -1,0 +1,11 @@
+.category {
+    display: flex;
+    
+}
+
+.image {
+    flex-shrink: 2;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}

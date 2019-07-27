@@ -12,6 +12,8 @@ import AddIcon from '@material-ui/icons/Add';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import CloseIcon from '@material-ui/icons/Close';
 import './Add_date.css'
+import testImg from './pikachu.png'
+import './Add.css'
 
 class Add extends React.Component{
   constructor(props) {
@@ -53,7 +55,13 @@ class Add extends React.Component{
             </Toolbar>
           </AppBar>
         </div>
-      </div>
+        <div className="category">
+          <img className="image" alt="404" src={ testImg } />
+          <img className="image" alt="404" src={ testImg } />
+          <img className="image" alt="404" src={ testImg } />
+          <img className="image" alt="404" src={ testImg } />
+        </div>
+        </div>
     );
   }
 }
