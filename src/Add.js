@@ -4,7 +4,6 @@ import MaterialUIPickers from './Add_date';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import './Add_date.css'
 import testImg from './pikachu.png'
 import './Add.css'
 import b1 from './ICON/bleed/1.png'
@@ -19,6 +18,8 @@ class Add extends React.Component{
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
+
+
 
   handleClick(e) {
     let state = this.props.state;
