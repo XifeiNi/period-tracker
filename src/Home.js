@@ -58,12 +58,14 @@ class Home extends React.Component{
             <Calendar />
           </Container>
           
-
+          <div className="container-div">
+          <div className="sub-container">
           <Fab size="medium" color="secondary" aria-label="add" 
                className={useStyles.margin} onClick={this.handleClick}>
             <AddIcon />
           </Fab>
-
+          </div>
+          </div>
           </div>
     );
   }
