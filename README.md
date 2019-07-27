@@ -15,10 +15,10 @@ npm start
 
 | Name       | Email          |
 | ---------- | -------------- |
-| Jack Jiang | me@jackjyq.com |
+| [Jack Jiang](https://github.com/jiangyiqun) | me@jackjyq.com |
 | Cecilia Ni | cecilia990@outlook.com|
 | ?          | ?              |
-| ?          | ?              |
+| Diming Zou          | Jzoudiming@gmail.com              |
 | ?          | ?              |
 | ?          | ?              |
 
