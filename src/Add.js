@@ -34,31 +34,27 @@ class Add extends React.Component{
         margin: theme.spacing(1),
       }
     }));
-    
+
     return (
       <div>
         <div className={useStyles.root}>
           <AppBar position="static" className="app-bar">
             <Toolbar>
-              <Typography variant="h6" color="inherit" className={useStyles.title}>
-                Period Tracker
-              </Typography>
-              <IconButton edge="end" color="inherit">
-                <MoreIcon />
-              </IconButton>
+              <Button variant="contained" color="primary" onClick={this.handleClick}>
+              X
+              </Button>
+              <Button variant="contained" color="primary" onClick={this.handleClick}>
+                Done
+              </Button>
             </Toolbar>
           </AppBar>
         </div>
         <div className = "container">
-          <Button variant="contained" color="primary" onClick={this.handleClick}>
-            X
-          </Button>
+
           <div>
           <MaterialUIPickers variant="contained" color="primary"/>
           </div>
-          <Button variant="contained" color="primary" onClick={this.handleClick}>
-            Done
-          </Button>
+
         </div>
       </div>
     );
