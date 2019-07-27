@@ -45,7 +45,7 @@ class Home extends React.Component{
             <AppBar position="static" className="app-bar">
               <Toolbar>
                 <Typography variant="h6" color="inherit" className={useStyles.title}>
-                  Photos
+                  Period Tracker
                 </Typography>
                 <IconButton edge="end" color="inherit">
                   <MoreIcon />
