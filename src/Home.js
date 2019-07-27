@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -20,13 +19,45 @@ class Home extends React.Component{
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleClickDay = this.handleClickDay.bind(this);
+    this.handleRenderCalendar = this.handleRenderCalendar.bind(this);
   }
 
   handleClick(e) {
-    this.props.handleChangeCurrentPage("Add");
+    let state = this.props.state;
+    state["currentPage"] = "Add";
+    this.props.handleChangeState(state);
+  }
+
+  handleClickDay(date) {
+    let state = this.props.state;
+    state["currentDate"] = date;
+    this.props.handleChangeState(state);
+  }
+
+  handleRenderCalendar(value) {
+    /*className
+    blood-1
+    blood-2
+    blood-3
+    blood-4
+    */
+    const view = value["view"];
+    const date = value["date"].toString();
+    const userData = this.props.state["userData"];
+    if (view !== "month") {
+      return null;
+    } else if (!(date in userData)) {
+      return null;
+    } else if (userData[date]["Blood"] === 0) {
+      return null;
+    } else {
+      return "blood-" + userData[date]["Blood"];
+    }
   }
 
   render() {
+    const state = this.props.state;
     const useStyles = makeStyles(theme => ({
       root: {
         flexGrow: 1,
@@ -41,6 +72,7 @@ class Home extends React.Component{
 
     return (
       <div>
+          {/* App Bar */}
           <div className={useStyles.root}>
             <AppBar position="static" className="app-bar">
               <Toolbar>
@@ -54,12 +86,13 @@ class Home extends React.Component{
               </Toolbar>
             </AppBar>
           </div>
-
+          {/* Container */}
           <Container maxWidth="xs">
-            <Calendar value={[new Date(2019,7,27), new Date(2019,7,28)]}
-                onChange={(value) => alert('New date is: ', value)}/>
+            <Calendar value={state["currentDate"]}
+                onClickDay={this.handleClickDay}
+                tileClassName={this.handleRenderCalendar}/>
           </Container>
-          
+          {/* Add Button */}
           <div className="container-div">
           <div className="sub-container">
           <Fab size="medium" color="secondary" aria-label="add" 
