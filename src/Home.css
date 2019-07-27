@@ -1,5 +1,9 @@
+body {
+	background-image: url("background.png");
+}
 .react-calendar {
     border: none;
+    background: transparent;
 }
 
 .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
@@ -10,9 +14,33 @@
 .container-div {
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .sub-container {
 	padding: 30px;
+}
+
+.react-calendar__tile {
+	background: ghostwhite;
+	font-size: large;
+}
+
+.MuiToolbar-regular {
+	background: lightpink;
+	color: lightyellow;
+	font-family: "Lucida Grande";
+}
+
+.react-calendar button {
+	height: 85px;
+}
+
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
+	background: border-box;
+}
+
+.MuiFab-sizeMedium {
+	width: 65px;
+	height: 65px;
 }
