@@ -4,14 +4,9 @@ import MaterialUIPickers from './Add_date';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Fab from '@material-ui/core/Fab';
-import IconButton from '@material-ui/core/IconButton';
-import AddIcon from '@material-ui/icons/Add';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import CloseIcon from '@material-ui/icons/Close';
 import './Add_date.css'
+import EmptyUserData from './dataset/EmptyUserData';
+
 
 class Add extends React.Component{
   constructor(props) {
@@ -20,7 +15,9 @@ class Add extends React.Component{
   }
 
   handleClick(e) {
-    this.props.handleChangeCurrentPage("Home");
+    let state = this.props.state;
+    state["currentPage"] = "Home";
+    this.props.handleChangeState(state);
   }
 
   render() {
