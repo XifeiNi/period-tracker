@@ -20,6 +20,6 @@ npm start
 | Muyang Li  | 0xlightyear@gmail.com              |
 | Yuyao Wang | amywang6002@gmail.com              |
 | Binru Wang | meredithw166@outlook.com              |
-| Diming           | ?              |
+| Diming Zou | Jzoudiming@gmail.com              |
 
 
