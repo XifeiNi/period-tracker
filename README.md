@@ -23,7 +23,7 @@ npm run deploy
 
 | Name       | Email          |
 | ---------- | -------------- |
-| Jack Jiang | me@jackjyq.com |
+| [Jack Jiang](https://github.com/jiangyiqun) | me@jackjyq.com |
 | Cecilia Ni | cecilia990@outlook.com|
 | Muyang Li  | 0xlightyear@gmail.com              |
 | Yuyao Wang | amywang6002@gmail.com              |
