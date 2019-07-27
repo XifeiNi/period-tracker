@@ -11,6 +11,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+import './Home.css';
+
 class Home extends React.Component{
   constructor(props) {
     super(props);
@@ -28,7 +30,7 @@ class Home extends React.Component{
       },
       title: {
         flexGrow: 1,
-      },
+      }
     }));
     return (
       <div>
