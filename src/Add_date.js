@@ -10,7 +10,7 @@ import {
 
 const useStyles = makeStyles({
   grid: {
-    width: '60',
+    width: '100%',
   },
 });
 
