@@ -13,7 +13,9 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.handleChangeCurrentPage = this.handleChangeCurrentPage.bind(this);
-    this.state = {"currentPage": "Home"};
+    this.state = {"currentPage": "Home",
+
+  };
 
   }
 
@@ -29,11 +31,11 @@ class App extends React.Component{
     let state = this.state;
     if (state["currentPage"] === "Home") {
       return (
-        <Home handleChangeCurrentPage={this.handleChangeCurrentPage}/>
+        <Home handleChangeCurrentPage={this.handleChangeCurrentPage} state={state}/>
       )
     } else if (state["currentPage"] === "Add") {
       return (
-        <Add handleChangeCurrentPage={this.handleChangeCurrentPage}/>
+        <Add handleChangeCurrentPage={this.handleChangeCurrentPage}  state={state}/>
       )
     } else {
       console.log(state);
