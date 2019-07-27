@@ -31,7 +31,7 @@ export default function MaterialUIPickers() {
         <KeyboardDatePicker
           margin="normal"
           id="mui-pickers-date"
-          label="Date picker"
+          label="Date"
           value={selectedDate}
           onChange={handleDateChange}
           KeyboardButtonProps={{

@@ -43,18 +43,14 @@ class Add extends React.Component{
               <Button variant="contained" color="primary" onClick={this.handleClick}>
               X
               </Button>
+              <span>
+            <MaterialUIPickers variant="contained" color="primary"/>
+            </span>
               <Button variant="contained" color="primary" onClick={this.handleClick}>
                 Done
               </Button>
             </Toolbar>
           </AppBar>
-        </div>
-        <div className = "container">
-
-          <div>
-          <MaterialUIPickers variant="contained" color="primary"/>
-          </div>
-
         </div>
       </div>
     );
