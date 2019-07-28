@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/period-tracker/precache-manifest.00fcfe455e1fc3a2f50b7d743396ea50.js"
+  "/period-tracker/precache-manifest.c6db443f55bc5269192173759eed86bf.js"
 );
 
 self.addEventListener('message', (event) => {
