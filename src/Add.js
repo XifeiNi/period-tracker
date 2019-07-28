@@ -33,7 +33,8 @@ class Add extends React.Component{
     this.state = {"currentPage": "blood"};
   }
 
-  nextState = () => {
+  nextState = (e) => {
+    console.log(e.target.id);
     let state = this.state;
     if (state["currentPage"] === "blood"){
       this.setState({currentPage: "mood"});
@@ -90,12 +91,12 @@ class Add extends React.Component{
           <img className="image" alt="404" src={ bt } />
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b1 } onClick={this.nextState}/>
-        <img className="image" alt="404" src={ b2 } onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b1 } id = "b1"  onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b2 } id = "b2"  onClick={this.nextState}/>
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b3 } onClick={this.nextState}/>
-        <img className="image" alt="404" src={ b4 } onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b3 } id = "b3"  onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b4 } id = "b4"  onClick={this.nextState}/>
         </div>
         </div>
     )}
@@ -118,12 +119,12 @@ class Add extends React.Component{
             <img className="image" alt="404" src={ mt } />
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ m1 } onClick={this.nextState}/>
-          <img className="image" alt="404" src={ m2 } onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m1 } id="m1"  onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m2 } id='m2' onClick={this.nextState}/>
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ m3 } onClick={this.nextState}/>
-          <img className="image" alt="404" src={ m4 } onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m3 } id='m3' onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m4 } id='m4' onClick={this.nextState}/>
           </div>
           </div>
       )}
@@ -146,12 +147,12 @@ class Add extends React.Component{
             <img className="image" alt="404" src={ pt } />
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ p1 } onClick={this.nextState}/>
-          <img className="image" alt="404" src={ p2 } onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p1 } id='p1' onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p2 } id='p2' onClick={this.nextState}/>
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ p3 } onClick={this.nextState}/>
-          <img className="image" alt="404" src={ p4 } onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p3 } id='p3'onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p4 } id='p4'onClick={this.nextState}/>
           </div>
           </div>
       )}
@@ -161,10 +162,10 @@ class Add extends React.Component{
             <div className={useStyles.root}>
               <AppBar position="static" className="app-bar">
                 <Toolbar>
-                  <Button variant="contained" color="primary" onClick={this.handleClick}>
+                  <Button variant="contained" color="primary" id='x1' onClick={this.handleClick}>
                   X
                   </Button>
-                  <Button variant="contained" color="primary" onClick={this.handleClick}>
+                  <Button variant="contained" color="primary" id='x2' onClick={this.handleClick}>
                     Done
                   </Button>
                 </Toolbar>
@@ -174,8 +175,8 @@ class Add extends React.Component{
               <img className="image" alt="404" src={ st } />
             </div>
             <div className="bleed_choice">
-            <img className="image" alt="404" src={ s1 } onClick={this.nextState}/>
-            <img className="image" alt="404" src={ s2 } onClick={this.nextState}/>
+            <img className="image" alt="404" src={ s1 } id='s1' onClick={this.nextState}/>
+            <img className="image" alt="404" src={ s2 } id='s2' onClick={this.nextState}/>
             </div>
             </div>
         )}
