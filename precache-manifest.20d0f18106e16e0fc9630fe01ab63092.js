@@ -1,27 +1,87 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bac1d2fa9099edc9ec3f315ecd74fe8f",
+    "revision": "eaf46ae13243ba23a8804bcbb014ff20",
     "url": "/period-tracker/index.html"
   },
   {
-    "revision": "f500ff17243bad49d61f",
+    "revision": "72257012b5df2a5bfd8e",
     "url": "/period-tracker/static/css/2.219df87e.chunk.css"
   },
   {
-    "revision": "a517178478249f645977",
-    "url": "/period-tracker/static/css/main.c223fd5f.chunk.css"
+    "revision": "d03f1be0b7f290a52548",
+    "url": "/period-tracker/static/css/main.21007f1c.chunk.css"
   },
   {
-    "revision": "f500ff17243bad49d61f",
-    "url": "/period-tracker/static/js/2.a93b548c.chunk.js"
+    "revision": "72257012b5df2a5bfd8e",
+    "url": "/period-tracker/static/js/2.15ddf7f6.chunk.js"
   },
   {
-    "revision": "a517178478249f645977",
-    "url": "/period-tracker/static/js/main.cf0339e1.chunk.js"
+    "revision": "d03f1be0b7f290a52548",
+    "url": "/period-tracker/static/js/main.e0e14969.chunk.js"
   },
   {
     "revision": "f09834fa1dd524955f53",
     "url": "/period-tracker/static/js/runtime~main.85fc2b01.js"
+  },
+  {
+    "revision": "1a1816da98ee32257ab16c3f94543ba0",
+    "url": "/period-tracker/static/media/1.1a1816da.png"
+  },
+  {
+    "revision": "68de0dc61087f73aeb9ba5d65dd115b4",
+    "url": "/period-tracker/static/media/1.68de0dc6.png"
+  },
+  {
+    "revision": "dee15ccd8adc8245e8b01d07714a804f",
+    "url": "/period-tracker/static/media/1.dee15ccd.png"
+  },
+  {
+    "revision": "f1c75bfecb47b13c5f399ac2cda3c806",
+    "url": "/period-tracker/static/media/1.f1c75bfe.png"
+  },
+  {
+    "revision": "106f80751892d2638235070f54004cd1",
+    "url": "/period-tracker/static/media/2.106f8075.png"
+  },
+  {
+    "revision": "7228a8ebbeb114e41d3234a1c4314508",
+    "url": "/period-tracker/static/media/2.7228a8eb.png"
+  },
+  {
+    "revision": "b42f32a57871d807c7772b8b94e95d3c",
+    "url": "/period-tracker/static/media/2.b42f32a5.png"
+  },
+  {
+    "revision": "b8ef385dd09b65868efbbba553c72134",
+    "url": "/period-tracker/static/media/2.b8ef385d.png"
+  },
+  {
+    "revision": "4f28454634190487a96b5920b534094c",
+    "url": "/period-tracker/static/media/3.4f284546.png"
+  },
+  {
+    "revision": "6b9c6dd5503d7e9978f40b9175a7234f",
+    "url": "/period-tracker/static/media/3.6b9c6dd5.png"
+  },
+  {
+    "revision": "a634a3b081e758a0285fcd8fcbfcf985",
+    "url": "/period-tracker/static/media/3.a634a3b0.png"
+  },
+  {
+    "revision": "6a7661c5fcd161c28715e6afc3fdf70e",
+    "url": "/period-tracker/static/media/4.6a7661c5.png"
+  },
+  {
+    "revision": "8612b05b04367695868703f8ab1fe2d6",
+    "url": "/period-tracker/static/media/4.8612b05b.png"
+  },
+  {
+    "revision": "ae79ef0c84a29ec9c9d3c50b56a23201",
+    "url": "/period-tracker/static/media/4.ae79ef0c.png"
+  },
+  {
+    "revision": "d79f564bbb69e710b4ed851294c8f9e5",
+    "url": "/period-tracker/static/media/background.d79f564b.png"
   },
   {
     "revision": "5cb7edfceb233100075dc9a1e12e8da3",
@@ -118,5 +178,21 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ebf6d1640ccddb99fb49f73c052c55a8",
     "url": "/period-tracker/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  {
+    "revision": "4e50600d7e211dd887cbf856af6da528",
+    "url": "/period-tracker/static/media/theme.4e50600d.png"
+  },
+  {
+    "revision": "95186819c83b27c77a17ccede3303c9b",
+    "url": "/period-tracker/static/media/theme.95186819.png"
+  },
+  {
+    "revision": "9e9008ff4dcbac6495c4896dd4b5bde3",
+    "url": "/period-tracker/static/media/theme.9e9008ff.png"
+  },
+  {
+    "revision": "de9058bac1bb831efc758b6c39d8388e",
+    "url": "/period-tracker/static/media/theme.de9058ba.png"
   }
 ]);
