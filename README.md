@@ -1,4 +1,8 @@
-# Period Tracker
+# Sakura
+
+A multifunctional period tracker that records menstrual cycles, provide medicine reminder and mental condition enlightenment.
+
+- [Pitching Slides](https://drive.google.com/open?id=1Uhi0TC3JCqhMIUT5DZIQyERm9cmct5kY)
 
 ## Deployment
 

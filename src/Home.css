@@ -53,27 +53,22 @@ body {
 	color: firebrick;
 }
 
-.blood-0 {
-	background: green;
-}
-
 .blood-1 {
-	background: red;
+	background: firebrick;
 }
 
 .blood-2 {
-	background: red;
+	background: firebrick;
 }
 
 .blood-3 {
-	background: red;
+	background: firebrick;
 }
 
 .blood-4 {
-	background: red;
+	background: firebrick;
 }
 
-
 .predict-1 {
-	background: orange;
+	background: lightcoral;
 }

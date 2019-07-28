@@ -22,40 +22,67 @@ import bt from './ICON/bleed/theme.png'
 import mt from './ICON/mood/theme.png'
 import pt from './ICON/pain/theme.png'
 import st from './ICON/sex/theme.png'
-
-
-
+import EmptyUserData from './dataset/EmptyUserData';
 
 class Add extends React.Component{
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = {"currentPage": "blood"};
+    this.handleOnSave = this.handleOnSave.bind(this);
+    this.handleOnCancel = this.handleOnCancel.bind(this);
+    this.state = {"currentPage": "blood",
+        "userData": JSON.parse(JSON.stringify(EmptyUserData))};
+        }
+
+
+  handleOnSave() {
+    // save change and go home
+    let appState = this.props.state;
+    let thisState = this.state;
+    const currentDate = appState["currentDate"];
+    appState["userData"][currentDate] = thisState["userData"];
+    appState["currentPage"] = "Home";
+    this.props.handleChangeState(appState);
   }
 
-  nextState = (e) => {
-    // console.log(e.target.id);
-    let state = this.state;
-    if (state["currentPage"] === "blood"){
-      this.setState({currentPage: "mood"});
-    }
-    else if (state["currentPage"] === "mood"){
-      this.setState({currentPage: "pain"});
-    }
-    else if (state["currentPage"] === "pain"){
-      this.setState({currentPage: "sex"});
-    }
-    else if (state["currentPage"] === "sex"){
-      let state = this.props.state;
-      state["currentPage"] = "Home";
-      this.props.handleChangeState(state);
-    }
+  handleOnCancel() {
+    // discard change and go home
+    let appState = this.props.state;
+    appState["currentPage"] = "Home";
+    this.props.handleChangeState(appState);
   }
 
   handleClick(e) {
-    let state = this.props.state;
-    state["currentPage"] = "Home";
-    this.props.handleChangeState(state);
+    const id = e.target.id;
+    let appState = this.props.state;
+    let thisState = this.state;
+    const currentDate = appState["currentDate"];
+    if (id.search(/b/) === 0) {
+      // console.log("Blood")
+      thisState["userData"]["Blood"] = parseInt(id.substring(1,2));
+      thisState["currentPage"] = "mood";
+      this.setState(thisState);
+    }
+    else if (id.search(/m/) === 0) {
+      // console.log("Mood")
+      thisState["userData"]["Mood"] = parseInt(id.substring(1,2));
+      thisState["currentPage"] = "pain";
+      this.setState(thisState);
+    }
+    else if (id.search(/p/) === 0) {
+      // console.log("Pain")
+      thisState["userData"]["Pain"] = parseInt(id.substring(1,2));
+      thisState["currentPage"] = "sex";
+      this.setState(thisState);
+    }
+    else if (id.search(/s/) === 0) {
+      // console.log("Sex")
+      thisState["userData"]["Sex"] = parseInt(id.substring(1,2));
+      appState["userData"][currentDate] = thisState["userData"];
+    }
+    else {
+      console.log(e);
+    }
   }
 
   render() {
@@ -78,10 +105,10 @@ class Add extends React.Component{
         <div className={useStyles.root}>
           <AppBar position="static" className="app-bar">
             <Toolbar>
-              <Button variant="contained" color="primary" onClick={this.handleClick}>
+              <Button variant="contained" color="primary" onClick={this.handleOnCancel}>
               X
               </Button>
-              <Button variant="contained" color="primary" onClick={this.handleClick}>
+              <Button variant="contained" color="primary" onClick={this.handleOnSave}>
                 Done
               </Button>
             </Toolbar>
@@ -91,12 +118,12 @@ class Add extends React.Component{
           <img className="image" alt="404" src={ bt } />
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b1 } id = "b1"  onClick={this.nextState}/>
-        <img className="image" alt="404" src={ b2 } id = "b2"  onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b1 } id = "b1"  onClick={this.handleClick}/>
+        <img className="image" alt="404" src={ b2 } id = "b2"  onClick={this.handleClick}/>
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b3 } id = "b3"  onClick={this.nextState}/>
-        <img className="image" alt="404" src={ b4 } id = "b4"  onClick={this.nextState}/>
+        <img className="image" alt="404" src={ b3 } id = "b3"  onClick={this.handleClick}/>
+        <img className="image" alt="404" src={ b4 } id = "b4"  onClick={this.handleClick}/>
         </div>
         </div>
     )}
@@ -106,10 +133,10 @@ class Add extends React.Component{
           <div className={useStyles.root}>
             <AppBar position="static" className="app-bar">
               <Toolbar>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>
+                <Button variant="contained" color="primary" onClick={this.handleOnCancel}>
                 X
                 </Button>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>
+                <Button variant="contained" color="primary" onClick={this.handleOnSave}>
                   Done
                 </Button>
               </Toolbar>
@@ -119,12 +146,12 @@ class Add extends React.Component{
             <img className="image" alt="404" src={ mt } />
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ m1 } id="m1"  onClick={this.nextState}/>
-          <img className="image" alt="404" src={ m2 } id='m2' onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m1 } id="m1"  onClick={this.handleClick}/>
+          <img className="image" alt="404" src={ m2 } id='m2' onClick={this.handleClick}/>
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ m3 } id='m3' onClick={this.nextState}/>
-          <img className="image" alt="404" src={ m4 } id='m4' onClick={this.nextState}/>
+          <img className="image" alt="404" src={ m3 } id='m3' onClick={this.handleClick}/>
+          <img className="image" alt="404" src={ m4 } id='m4' onClick={this.handleClick}/>
           </div>
           </div>
       )}
@@ -134,10 +161,10 @@ class Add extends React.Component{
           <div className={useStyles.root}>
             <AppBar position="static" className="app-bar">
               <Toolbar>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>
+                <Button variant="contained" color="primary" onClick={this.handleOnCancel}>
                 X
                 </Button>
-                <Button variant="contained" color="primary" onClick={this.handleClick}>
+                <Button variant="contained" color="primary" onClick={this.handleOnSave}>
                   Done
                 </Button>
               </Toolbar>
@@ -147,12 +174,12 @@ class Add extends React.Component{
             <img className="image" alt="404" src={ pt } />
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ p1 } id='p1' onClick={this.nextState}/>
-          <img className="image" alt="404" src={ p2 } id='p2' onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p1 } id='p1' onClick={this.handleClick}/>
+          <img className="image" alt="404" src={ p2 } id='p2' onClick={this.handleClick}/>
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ p3 } id='p3'onClick={this.nextState}/>
-          <img className="image" alt="404" src={ p4 } id='p4'onClick={this.nextState}/>
+          <img className="image" alt="404" src={ p3 } id='p3'onClick={this.handleClick}/>
+          <img className="image" alt="404" src={ p4 } id='p4'onClick={this.handleClick}/>
           </div>
           </div>
       )}
@@ -162,10 +189,10 @@ class Add extends React.Component{
             <div className={useStyles.root}>
               <AppBar position="static" className="app-bar">
                 <Toolbar>
-                  <Button variant="contained" color="primary" id='x1' onClick={this.handleClick}>
+                  <Button variant="contained" color="primary" onClick={this.handleOnCancel}>
                   X
                   </Button>
-                  <Button variant="contained" color="primary" id='x2' onClick={this.handleClick}>
+                  <Button variant="contained" color="primary" onClick={this.handleOnSave}>
                     Done
                   </Button>
                 </Toolbar>
@@ -175,8 +202,8 @@ class Add extends React.Component{
               <img className="image" alt="404" src={ st } />
             </div>
             <div className="bleed_choice">
-            <img className="image" alt="404" src={ s1 } id='s1' onClick={this.nextState}/>
-            <img className="image" alt="404" src={ s2 } id='s2' onClick={this.nextState}/>
+            <img className="image" alt="404" src={ s1 } id='s1' onClick={this.handleClick}/>
+            <img className="image" alt="404" src={ s2 } id='s2' onClick={this.handleClick}/>
             </div>
             </div>
         )}
