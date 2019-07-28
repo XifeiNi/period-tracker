@@ -37,21 +37,36 @@ class Home extends React.Component{
 
   handleRenderCalendar(value) {
     /*className
-    blood-1
-    blood-2
-    blood-3
-    blood-4
+      blood-0
+      blood-1
+      blood-2
+      blood-3
+      blood-4
+      predict-0
+      predict-1
     */
     const view = value["view"];
     const date = value["date"].toString();
     const userData = this.props.state["userData"];
+    const startDate = this.props.state["startDate"];
+    const totaolDuration = this.props.state["totaolDuration"];
+    const periodDuration = this.props.state["periodDuration"];
+    const msPerDay = 60*60*24*1000;
     if (view !== "month") {
+      // not in month view
       return null;
     } else if (!(date in userData)) {
-      return null;
-    } else if (userData[date]["Blood"] === 0) {
-      return null;
+      // no data, render class predict-n
+      const fromStartDateMs = Date.parse(date) - Date.parse(startDate);
+      const fromStartDateDay = fromStartDateMs / msPerDay;
+      const fromStartDate = Math.abs(fromStartDateDay % totaolDuration);
+      if (fromStartDate < periodDuration) {
+        return "predict-1";
+      } else {
+        return "predict-0";
+      }
     } else {
+      // has data, render class blood-n
       return "blood-" + userData[date]["Blood"];
     }
   }

@@ -34,7 +34,7 @@ class Add extends React.Component{
   }
 
   nextState = (e) => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
     let state = this.state;
     if (state["currentPage"] === "blood"){
       this.setState({currentPage: "mood"});
@@ -71,7 +71,7 @@ class Add extends React.Component{
         margin: theme.spacing(1),
       }
     }));
-    console.log(state["currentPage"]);
+    // console.log(state["currentPage"]);
     if (state["currentPage"] === "blood"){
     return (
       <div>
