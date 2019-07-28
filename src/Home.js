@@ -104,8 +104,8 @@ class Home extends React.Component{
           {/* Container */}
           <Container maxWidth="xs">
             <Calendar value={state["currentDate"]}
-                onClickDay={this.handleClickDay}
-                tileClassName={this.handleRenderCalendar}/>
+                  onClickDay={this.handleClickDay}
+                  tileClassName={this.handleRenderCalendar}/>
           </Container>
           {/* Add Button */}
           <div className="container-div">
