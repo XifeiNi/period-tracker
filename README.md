@@ -2,7 +2,7 @@
 
 A multifunctional period tracker that records menstrual cycles, provide medicine reminder and mental condition enlightenment.
 
-- [Pitching Slides](https://drive.google.com/open?id=1Uhi0TC3JCqhMIUT5DZIQyERm9cmct5kY)
+- [Pitching Slides](https://drive.google.com/open?id=18VuHNmz88jmQJ4G9e15A2G4cfrIMUkcL)
 
 ## Deployment
 
