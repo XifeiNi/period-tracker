@@ -59,8 +59,10 @@ class Home extends React.Component{
       // no data, render class predict-n
       const fromStartDateMs = Date.parse(date) - Date.parse(startDate);
       const fromStartDateDay = fromStartDateMs / msPerDay;
-      const fromStartDate = Math.abs(fromStartDateDay % totaolDuration);
-      if (fromStartDate < periodDuration) {
+      const fromStartDate = fromStartDateDay % totaolDuration;
+      if (fromStartDate <= 0) {
+        return null;
+      } else if (fromStartDate < periodDuration) {
         return "predict-1";
       } else {
         return "predict-0";
