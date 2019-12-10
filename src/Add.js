@@ -8,6 +8,10 @@ import b1 from './ICON/bleed/1.png'
 import b2 from './ICON/bleed/2.png'
 import b3 from './ICON/bleed/3.png'
 import b4 from './ICON/bleed/4.png'
+import b1_click from './ICON/bleed/1_click.png'
+import b2_click from './ICON/bleed/2_click.png'
+import b3_click from './ICON/bleed/3_click.png'
+import b4_click from './ICON/bleed/4_click.png'
 import m1 from './ICON/mood/1.png'
 import m2 from './ICON/mood/2.png'
 import m3 from './ICON/mood/3.png'
@@ -33,6 +37,9 @@ class Add extends React.Component{
     this.state = {"currentPage": "blood"};
   }
 
+  onChangePictureBlood1 = () => {
+
+  }
   nextState = () => {
     let state = this.state;
     if (state["currentPage"] === "blood"){
@@ -90,7 +97,7 @@ class Add extends React.Component{
           <img className="image" alt="404" src={ bt } />
         </div>
         <div className="bleed_choice">
-        <img className="image" alt="404" src={ b1 } onClick={this.nextState}/>
+        <img id="bleed1" className="image" alt="404" src={ b1 } onClick={this.nextState}/>
         <img className="image" alt="404" src={ b2 } onClick={this.nextState}/>
         </div>
         <div className="bleed_choice">
@@ -146,7 +153,7 @@ class Add extends React.Component{
             <img className="image" alt="404" src={ pt } />
           </div>
           <div className="bleed_choice">
-          <img className="image" alt="404" src={ p1 } onClick={this.nextState}/>
+          <img id="blood1"className="image" onmouseover={this.onChangePictureBlood1} alt="404" src={ p1 } onClick={this.nextState}/>
           <img className="image" alt="404" src={ p2 } onClick={this.nextState}/>
           </div>
           <div className="bleed_choice">
