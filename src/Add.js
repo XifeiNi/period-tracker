@@ -56,6 +56,7 @@ class Add extends React.Component{
     let state = this.state;
     if (state["currentPage"] === "blood"){
       this.setState({currentPage: "mood"});
+    }
   }
 
   handleOnCancel() {
